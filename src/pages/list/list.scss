@@ -1,0 +1,14 @@
+page-list {
+
+}
+.cross {
+  display: inline-block;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  border-top: 1px solid grey;
+  -webkit-transition: width 0.5s ease-in;
+  &:hover {
+    width: 100%;
+  }
+}

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Shopping List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div ion-item *ngFor="let item of items">
+      <ion-icon name="{{item.icon}}" item-left animation="fade-in-out"></ion-icon>
+      <div (click)="itemTapped($event, item)">{{item.title}}</div>
+      <ion-icon ios="ios-close" md="md-close" item-right (click)="askForDeleting($event, item)"></ion-icon>
+
+    </div>
+  </ion-list>
+
+  <ion-item>
+    <ion-label stacked>Add item</ion-label>
+    <ion-input type="text" [(ngModel)]="addedValue"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <button (click)="addItem(addedValue)" ion-button>Add</button>
+  </ion-item>
+  <div *ngIf="selectedItem" >
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>
