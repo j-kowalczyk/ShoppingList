@@ -41,7 +41,7 @@ To run on PC
 To run on android
 ```ionic run android```
 
-#FAQ
+*FAQ*
 
 If in console there's an error with 'indexOf' when ```ionic serve``` runs, please update modules to the specific versions:
 ```npm i @ionic/storage@1.1.7```

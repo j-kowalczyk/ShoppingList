@@ -6,6 +6,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { AboutPage } from '../pages/about/about';
 import { ListPage } from '../pages/list/list';
+import { OptionsPage } from '../pages/options/options';
 
 
 @Component({
@@ -27,7 +28,8 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Shopping List', component: ListPage },
-      { title: 'About', component: AboutPage }
+      { title: 'About', component: AboutPage },
+      { title: 'Options', component: OptionsPage }
     ];
   }
 
